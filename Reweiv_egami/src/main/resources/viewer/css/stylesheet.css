@@ -1,0 +1,13 @@
+.button {
+    -fx-shape: "M 250 400 A 50 50 0 1 1 400 400 A 50 50 0 1 1 250 400 ";
+    -fx-background-color: transparent;
+    height: 50px;
+}
+
+.button:hover {
+    -fx-background-color: lightblue;
+}
+
+.hbox {
+    -fx-background-color: lightgray;
+}
