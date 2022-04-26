@@ -1,6 +1,6 @@
 .button {
     -fx-shape: "M 250 400 A 50 50 0 1 1 400 400 A 50 50 0 1 1 250 400 ";
-    -fx-background-color: transparent;
+    -fx-background-color: rgb(209, 207, 207);
     height: 50px;
 }
 
@@ -10,4 +10,15 @@
 
 .hbox {
     -fx-background-color: lightgray;
+}
+
+.kontraszt {
+    -fx-background-color: rgb(209, 207, 207);
+    -fx-shape: "M 150 150 Q 150 100 200 100 L 200 100 Q 250 100 250 150 L 250 450 Q 250 500 200 500 L 200 500 Q 150 500 150 450 L 150 150 ";
+}
+
+.keret {
+    -fx-background-color: rgb(221, 221, 221);
+    -fx-border-color: black;
+    -fx-border-width: 3px;
 }

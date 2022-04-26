@@ -27,10 +27,10 @@ hogy mindenki  tudja hasznalni nem kell  magyarázó videokat nézni róla annyi
 ## Használat
 
 A program  két menüvel kezelhető a jobbb oldalon lévő menün helyezkednek el a  kép manipulálásra szolgáló gombok
-a tábvaszerű középső menü pedig a képek nézegetését teszi lehetővé .
+a tálvaszerű középső menü pedig a képek nézegetéset teszi lehtővé 
 
 Induláskor egy fekete színű nagy méretű kép jelenik meg, amely tallózzásal vagy behúzással írható felül egy tetszőleges fényképpel
-Ez az akció akárhányszor megismételhető amikor más képet szeretnénk nézni illetve, az adott mappában lévő fényképek a nyíl billentyűkel végignézegethetők.
+Ez az akcio akárháynszor megismételhető amikor más képet szeretnénk nézni illetva az adott mappában lévő fényképek a nyíl billentyűkel végignézegethetők 
 
 
 A szoftver egyszerűbb képfeldolgozási feladatokat is el tud látni: tükrözés, nagyítás, forgatás 90 fokkal, fekete fehérré alakítás, kontraszt állítása,
@@ -42,7 +42,7 @@ ezek a:
 
 	~tükrözés aminek ikonja egy kis kézi tükör 
 
-	~Fekete fehérré alakítás aminek a jele egy téglalap az átloja mentén kettévágva ahol az egyik fél fekte a másik pedig fehér 
+	~Fekete fehérré alakítás aminek a jele egy téglalap az átloja mnetén kettévágva ahol az egyik fél fekte a másik pedig fehér 
 	
 	~a kontrasztot  a már felsorolt funkciok alatt  elhelyezkedő  kontaraszt elnevzésű csúszkával  lehet állítani
 

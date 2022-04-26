@@ -2,42 +2,129 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.controllers.MainController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Fájl">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#btnMegnyitClick" text="Megnyitás..." />
                   <MenuItem mnemonicParsing="false" onAction="#btnMentesMaskentClick" text="Mentés másként..." />
               <MenuItem mnemonicParsing="false" onAction="#btnKilepesClick" text="Kilépés" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Művelet">
             <items>
+                  <Menu mnemonicParsing="false" text="Forgatás">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#btnForgatBalraClick" text="Balra forgat" />
+                        <MenuItem mnemonicParsing="false" onAction="#btnForgatJobbraClick" text="Jobbra forgat" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Nagyítás">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#btnNagyitClick" text="Nagyítás" />
+                        <MenuItem mnemonicParsing="false" onAction="#btnKicsinyitClick" text="Kicsinyítés" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#btnTukrozesClick" text="Tükrözés" />
+                  <MenuItem mnemonicParsing="false" onAction="#btnSzurkearnyalatClick" text="Fekete-fehérré" />
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
-   <bottom>
-      <HBox alignment="CENTER" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="60.0" prefHeight="60.0" styleClass="hbox" BorderPane.alignment="CENTER">
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="keret" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin></AnchorPane>
+   </center>
+   <right>
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="70.0" minWidth="70.0" BorderPane.alignment="CENTER">
          <children>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnFrogatBalraClick" prefHeight="50.0" prefWidth="50.0">
-               <HBox.margin>
-                  <Insets left="10.0" right="10.0" />
-               </HBox.margin>
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnTukrozesClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/tukrozes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnSzurkearanylatClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/szurkearnyalat.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <VBox alignment="CENTER" maxWidth="60.0" prefHeight="200.0" prefWidth="60.0" styleClass="kontraszt">
+               <children>
+                  <Label text="Kontraszt">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Slider fx:id="sldKontraszt" minHeight="100.0" orientation="VERTICAL" prefHeight="118.0" prefWidth="14.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Slider>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxWidth="60.0" prefHeight="200.0" prefWidth="60.0" styleClass="kontraszt">
+               <children>
+                  <Label text="Fényerő">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Slider fx:id="sldFenyero" minHeight="100.0" orientation="VERTICAL" prefHeight="118.0" prefWidth="14.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Slider>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="70.0" maxWidth="1.7976931348623157E308" minHeight="70.0" minWidth="-Infinity" prefHeight="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnFrogatBalraClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
                <graphic>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -45,26 +132,11 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
             </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnKicsinyitClick" prefHeight="50.0" prefWidth="50.0">
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/kicsinyit.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnTukrozesClick" prefHeight="50.0" prefWidth="50.0">
-               <graphic>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/tukrozes.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnNagyitClick" prefHeight="50.0" prefWidth="50.0">
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnNagyitClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -72,8 +144,23 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
             </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnForgatJobbraClick" prefHeight="50.0" prefWidth="50.0">
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnKicsinyitClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/kicsinyit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnForgatJobbraClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
                <graphic>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -81,11 +168,14 @@
                      </image>
                   </ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
             </Button>
          </children>
       </HBox>
    </bottom>
-   <center>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" />
-   </center>
+   <left>
+      <VBox maxWidth="70.0" minWidth="70.0" BorderPane.alignment="CENTER" />
+   </left>
 </BorderPane>
