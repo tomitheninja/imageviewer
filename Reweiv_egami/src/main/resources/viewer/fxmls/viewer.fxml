@@ -69,7 +69,7 @@
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
             </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnSzurkearanylatClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnSzurkearnyalatClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
                <graphic>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -124,7 +124,7 @@
    <bottom>
       <HBox alignment="CENTER" maxHeight="70.0" maxWidth="1.7976931348623157E308" minHeight="70.0" minWidth="-Infinity" prefHeight="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnFrogatBalraClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
+            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnForgatBalraClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
                <graphic>
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>

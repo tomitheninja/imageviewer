@@ -10,31 +10,35 @@ public class MainController {
     }
     @FXML
     protected void btnMegnyitClick() {
-        System.exit(0);
+        //TODO
     }
     @FXML
     protected void btnMentesMaskentClick() {
-        System.exit(0);
+        //TODO
     }
     @FXML
-    protected void btnFrogatBalraClick() {
-        System.exit(0);
+    protected void btnForgatBalraClick() {
+        //TODO
     }
     @FXML
     protected void btnTukrozesClick() {
-        System.exit(0);
+        //TODO
     }
     @FXML
     protected void btnForgatJobbraClick() {
-        System.exit(0);
+        //TODO
     }
     @FXML
     protected void btnKicsinyitClick() {
-        System.exit(0);
+        //TODO
+    }
+    @FXML
+    protected void btnSzurkearnyalatClick() {
+        //TODO
     }
     @FXML
     protected void btnNagyitClick() {
-        System.exit(0);
+        //TODO
     }
 
 
