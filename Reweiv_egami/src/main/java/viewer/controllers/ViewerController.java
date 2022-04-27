@@ -1,9 +1,8 @@
 package viewer.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
-public class MainController {
+public class ViewerController {
     @FXML
     protected void btnKilepesClick() {
         System.exit(0);

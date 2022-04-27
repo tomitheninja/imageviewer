@@ -37,21 +37,21 @@ A szoftver egyszerűbb képfeldolgozási feladatokat is el tud látni: tükröz�
 a  kép vilagossabbá illetve sötétebbé tétele.
 
 
-A funkciok nagy része a képernyő jobb oldalán találhato menüsávon található kis piktogrammokra való kattintással megy végbe
+A funkciok nagy része a képernyő jobb oldalán találhato menüsávon található kis piktogrammokra való kattintással megy végbe.
 ezek a: 
 
-	~tükrözés aminek ikonja egy kis kézi tükör 
+	~tükrözés aminek ikonja egy kis kézi tükör. 
 
-	~Fekete fehérré alakítás aminek a jele egy téglalap az átloja mentén kettévágva ahol az egyik fél fekte a másik pedig fehér 
+	~Fekete fehérré alakítás aminek a jele egy téglalap az átloja mentén kettévágva ahol az egyik fél fekte a másik pedig fehér .
 	
-	~a kontrasztot  a már felsorolt funkciok alatt  elhelyezkedő  kontaraszt elnevzésű csúszkával  lehet állítani
+	~a kontrasztot  a már felsorolt funkciok alatt  elhelyezkedő  kontaraszt elnevzésű csúszkával  lehet állítani.
 
-	~a  kép fényessgét pedig a legalsó csűszkával lehet szabályozni
+	~a  kép fényessgét pedig a legalsó csűszkával lehet szabályozni.
 
 
-A forgatás a lent középen található menüsávon a balra illetve jobbra mutató  nyil megnoymasavalvan magvalosítva 
+A forgatás a lent középen található menüsávon a balra illetve jobbra mutató  nyil megnoymasaval van magvalosítva.
 
-A nagyitás es kicsinyítés szintén ezen a menün található. Nagyítani a "+" jellel és a fel nyíl segítségéevel kicsinyíteni a "-" jellel és le niyllal   tudunk  
+A nagyitás es kicsinyítés szintén ezen a menün található. Nagyítani a "+" jellel és a fel nyíl segítségéevel kicsinyíteni a "-" jellel és le nyíllal tudunk.
 
 
 A szoftver automatikusan menti a legutolsó 15 állapotot egy ideiglenes könyvtárba. Ezen kívül a mentés másként gomb megnyomásával exportálható png, jpg vagy bitmap formátumba.
