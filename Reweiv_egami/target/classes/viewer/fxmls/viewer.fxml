@@ -49,10 +49,13 @@
       </MenuBar>
    </top>
    <center>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="keret" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="acp" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="keret" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="10.0" />
-         </BorderPane.margin></AnchorPane>
+         </BorderPane.margin>
+         <children>
+            <ImageView fx:id="imgv" fitHeight="150.0" fitWidth="200.0" layoutX="470.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
    </center>
    <right>
       <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="70.0" minWidth="70.0" BorderPane.alignment="CENTER">
