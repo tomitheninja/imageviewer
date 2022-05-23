@@ -34,12 +34,6 @@
                         <MenuItem mnemonicParsing="false" onAction="#btnForgatJobbraClick" text="Jobbra forgat" />
                     </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" text="Nagyítás">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#btnNagyitClick" text="Nagyítás" />
-                        <MenuItem mnemonicParsing="false" onAction="#btnKicsinyitClick" text="Kicsinyítés" />
-                    </items>
-                  </Menu>
                   <MenuItem mnemonicParsing="false" onAction="#btnTukrozesClick" text="Tükrözés" />
                   <MenuItem mnemonicParsing="false" onAction="#btnSzurkearnyalatClick" text="Fekete-fehérré" />
               <MenuItem mnemonicParsing="false" text="Delete" />
@@ -132,30 +126,6 @@
                   <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/forgat_balra.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets left="5.0" right="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnNagyitClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/nagyit.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <HBox.margin>
-                  <Insets left="5.0" right="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#btnKicsinyitClick" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/stylesheet.css">
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/kicsinyit.png" />
                      </image>
                   </ImageView>
                </graphic>

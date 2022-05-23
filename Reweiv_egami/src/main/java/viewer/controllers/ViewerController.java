@@ -71,20 +71,12 @@ public class ViewerController {
         performAction(new RotateCW());
     }
 
-    @FXML
-    protected void btnKicsinyitClick() {
-        //TODO
-    }
 
     @FXML
     protected void btnSzurkearnyalatClick() {
         //TODO
     }
 
-    @FXML
-    protected void btnNagyitClick() {
-        //TODO
-    }
 
 
 }
