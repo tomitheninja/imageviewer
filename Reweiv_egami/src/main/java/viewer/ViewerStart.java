@@ -15,9 +15,11 @@ import java.io.IOException;
 public class ViewerStart extends Application {
     @FXML
     public static ImageView imgv;
+    public static Stage stage;
 
     @Override
     public void start(Stage stage) throws IOException {
+        ViewerStart.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(ViewerStart.class.getResource("fxmls/Viewer.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Reweiv egami");

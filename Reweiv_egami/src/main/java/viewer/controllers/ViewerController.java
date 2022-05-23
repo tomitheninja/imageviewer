@@ -1,60 +1,90 @@
 package viewer.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import viewer.ViewerStart;
-import viewer.muveletek.Betoltes;
+import viewer.imageactions.*;
+import viewer.services.ImageConverterService;
+import viewer.services.ImageIOService;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class ViewerController {
-    public ViewerController() throws MalformedURLException {
+    ImageIOService fileService;
+    ImageConverterService converterService = new ImageConverterService();
+    private BufferedImage img;
+
+    public ViewerController() {
+        fileService = new ImageIOService(ViewerStart.stage);
+    }
+
+    public BufferedImage getImage() {
+        return img;
+    }
+
+    public void setImage(BufferedImage img) {
+        this.img = img;
+        var result = converterService.fromBufferedImage(img);
+        ViewerStart.imgv.setImage(result);
+    }
+
+    public void performAction(ImageAction action) {
+        BufferedImage img = getImage();
+        if (img != null) setImage(action.performAction(img));
     }
 
     @FXML
     protected void btnKilepesClick() {
         System.exit(0);
     }
+
     @FXML
     protected void btnMegnyitClick() {
-        //TODO
+        try {
+            if (fileService.askOpenFileLocation()) setImage(fileService.loadImage());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
     @FXML
     protected void btnMentesMaskentClick() {
-        //TODO
+        try {
+            if (fileService.askSaveFileLocation()) fileService.saveImage(img);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
     @FXML
-    protected void btnForgatBalraClick() throws MalformedURLException{
-        Image img = new Image("https://i2.wp.com/mora.u-szeged.hu/wp-content/uploads/2018/07/IMG_9366.jpg?fit=491736&ssl=1");
-        ViewerStart.imgv.setImage(img);
+    protected void btnForgatBalraClick() {
+        performAction(new RotateCCW());
     }
+
     @FXML
     protected void btnTukrozesClick() {
-        //TODO
+        performAction(new ImageFlipH());
     }
+
     @FXML
     protected void btnForgatJobbraClick() {
-        //TODO
+        performAction(new RotateCW());
     }
+
     @FXML
     protected void btnKicsinyitClick() {
         //TODO
     }
+
     @FXML
     protected void btnSzurkearnyalatClick() {
         //TODO
     }
+
     @FXML
     protected void btnNagyitClick() {
         //TODO
     }
-
-
-
-
-
 
 
 }
