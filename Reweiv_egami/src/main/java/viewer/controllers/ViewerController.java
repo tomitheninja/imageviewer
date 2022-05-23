@@ -78,7 +78,7 @@ public class ViewerController {
 
     @FXML
     protected void btnSzurkearnyalatClick() {
-        //TODO
+        performAction(new GrayScale());
     }
 
     @FXML
