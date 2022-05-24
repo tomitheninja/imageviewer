@@ -3,6 +3,7 @@ package viewer.controllers;
 import javafx.fxml.FXML;
 import viewer.ViewerStart;
 import viewer.imageactions.*;
+import viewer.services.HistoryService;
 import viewer.services.ImageConverterService;
 import viewer.services.ImageIOService;
 
@@ -11,6 +12,7 @@ import java.io.IOException;
 
 public class ViewerController {
     ImageIOService fileService;
+    HistoryService history = new HistoryService();
     ImageConverterService converterService = new ImageConverterService();
     private BufferedImage img;
 
@@ -30,7 +32,10 @@ public class ViewerController {
 
     public void performAction(ImageAction action) {
         BufferedImage img = getImage();
-        if (img != null) setImage(action.performAction(img));
+        if (img != null) {
+            history.push(img);
+            setImage(action.performAction(img));
+        }
     }
 
     @FXML
@@ -41,7 +46,11 @@ public class ViewerController {
     @FXML
     protected void btnMegnyitClick() {
         try {
-            if (fileService.askOpenFileLocation()) setImage(fileService.loadImage());
+            if (fileService.askOpenFileLocation()) {
+                history.clear();
+                setImage(fileService.loadImage());
+                history.push(img);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,10 +80,6 @@ public class ViewerController {
         performAction(new RotateCW());
     }
 
-    @FXML
-    protected void btnKicsinyitClick() {
-        //TODO
-    }
 
     @FXML
     protected void btnSzurkearnyalatClick() {
@@ -82,9 +87,13 @@ public class ViewerController {
     }
 
     @FXML
-    protected void btnNagyitClick() {
-        //TODO
+    protected void btnVisszavonClick() {
+        setImage(history.pop());
     }
 
-
+    @FXML
+    protected void btnTorolClick() {
+        fileService.delete();
+        history.clear();
+    }
 }
