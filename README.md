@@ -51,8 +51,6 @@ ezek a:
 
 A forgatás a lent középen található menüsávon a balra illetve jobbra mutató  nyil megnoymasaval van magvalosítva.
 
-A nagyitás es kicsinyítés szintén ezen a menün található. Nagyítani a "+" jellel és a fel nyíl segítségéevel kicsinyíteni a "-" jellel és le nyíllal tudunk.
-
 
 A szoftver automatikusan menti a legutolsó 15 állapotot egy ideiglenes könyvtárba. Ezen kívül a mentés másként gomb megnyomásával exportálható png, jpg vagy bitmap formátumba.
 
