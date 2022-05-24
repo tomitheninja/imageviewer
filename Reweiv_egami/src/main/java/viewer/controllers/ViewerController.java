@@ -85,4 +85,9 @@ public class ViewerController {
 
     }
 
+    @FXML
+    protected void btnTorolClick(){
+
+    }
+
 }
