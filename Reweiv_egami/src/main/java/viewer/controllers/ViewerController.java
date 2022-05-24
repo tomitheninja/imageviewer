@@ -80,6 +80,9 @@ public class ViewerController {
         //TODO
     }
 
+    @FXML
+    protected void btnVisszavonClick(){
 
+    }
 
 }
