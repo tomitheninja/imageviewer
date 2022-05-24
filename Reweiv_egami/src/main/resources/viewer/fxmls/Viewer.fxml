@@ -37,7 +37,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#btnVisszavonClick" text="Visszavonás" />
                   <MenuItem mnemonicParsing="false" onAction="#btnTukrozesClick" text="Tükrözés" />
                   <MenuItem mnemonicParsing="false" onAction="#btnSzurkearnyalatClick" text="Fekete-fehérré" />
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" text="Delete" onAction="#btnTorolClick" />
             </items>
           </Menu>
         </menus>

@@ -3,15 +3,11 @@ package viewer.services;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import viewer.fileformatum.FileFormatum;
-import viewer.fileformatum.Jpeg;
-import viewer.fileformatum.Jpg;
-import viewer.fileformatum.Png;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class ImageIOService {
     private final Stage stage;
@@ -32,6 +28,15 @@ public class ImageIOService {
         if (newFile == null) return false;
         this.file = newFile;
         return true;
+    }
+
+    public boolean delete() {
+        try {
+            if (file.delete()) file = null;
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public boolean askSaveFileLocation() {
