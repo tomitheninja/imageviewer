@@ -80,6 +80,14 @@ public class ViewerController {
         performAction(new GrayScale());
     }
 
+    @FXML
+    protected void btnVisszavonClick(){
 
+    }
+
+    @FXML
+    protected void btnTorolClick(){
+
+    }
 
 }
