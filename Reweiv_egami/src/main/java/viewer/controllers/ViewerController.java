@@ -1,6 +1,7 @@
 package viewer.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import viewer.ViewerStart;
 import viewer.imageactions.*;
 import viewer.services.ImageConverterService;
@@ -25,7 +26,9 @@ public class ViewerController {
     public void setImage(BufferedImage img) {
         this.img = img;
         var result = converterService.fromBufferedImage(img);
+
         ViewerStart.imgv.setImage(result);
+
     }
 
     public void performAction(ImageAction action) {
