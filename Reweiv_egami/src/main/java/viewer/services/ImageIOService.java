@@ -2,19 +2,29 @@ package viewer.services;
 
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import viewer.fileformatum.FileFormatum;
+import viewer.fileformatum.Jpeg;
+import viewer.fileformatum.Jpg;
+import viewer.fileformatum.Png;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class ImageIOService {
-    public File file;
     private final Stage stage;
+    public File file;
+
+    public ImageIOService(Stage stage) {
+        this.stage = stage;
+    }
+
     public boolean askOpenFileLocation() {
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open File");
+        fileChooser.getExtensionFilters().add(FileFormatum.getExtensionFilter());
         if (file != null) {
             fileChooser.setInitialDirectory(file.getParentFile());
         }
@@ -27,6 +37,7 @@ public class ImageIOService {
     public boolean askSaveFileLocation() {
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save File");
+        fileChooser.getExtensionFilters().add(FileFormatum.getExtensionFilter());
         if (file != null) {
             fileChooser.setInitialFileName(file.getName());
             fileChooser.setInitialDirectory(file.getParentFile());
@@ -45,9 +56,5 @@ public class ImageIOService {
 
     public BufferedImage loadImage() throws IOException {
         return ImageIO.read(file);
-    }
-
-    public ImageIOService(Stage stage) {
-        this.stage = stage;
     }
 }
